@@ -1,0 +1,108 @@
+@import '../libs/mixins';
+@import '../libs/variables';
+
+.header {
+  margin-bottom: 150px;
+}
+
+.nav {
+  padding: 28px 0;
+  margin-bottom: 120px;
+
+  @include flex();
+
+  &-logo {
+    @include text(24px, 36px, 700, $darkGray);
+    letter-spacing: 3px;
+  }
+
+  &-btn {
+    @include btn();
+  }
+
+  &-bg {
+    position: absolute;
+  }
+}
+
+#nav {
+  &-bg {
+    &-top {
+      &-right {
+        width: 50vw;
+        top: 0;
+        right: 0;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+.home {
+  &-list {
+    @include flex(flex-start, flex-start);
+  }
+
+  &-part {
+    &:first-child {
+      margin-top: 100px;
+      width: 750px;
+      display: flex;
+      flex-direction: column;
+      gap: 27px;
+    }
+
+    &:last-child {
+      position: relative;
+      flex: 1;
+    }
+  }
+
+  &-subtitle {
+    @include text(16px, 16px, 700, $darkGray);
+  }
+
+  &-title {
+    @include text(58px, 68px, 700, $darkGray);
+
+    span {
+      color: $green;
+    }
+  }
+
+  &-text {
+    max-width: 540px;
+    @include text(18px, 28px, 400, $gray, $interFont);
+  }
+
+  &-btn {
+    @include btn(#fff, $green, $green, $green, 15px 80px);
+  }
+
+  &-screens {
+    &__list {
+      @include flex(flex-end, space-between);
+      gap: 32px;
+    }
+
+    &__item {
+      width: 16vw;
+
+      &:first-child {
+        margin-top: 23vh;
+      }
+    }
+
+    &__img {
+      width: 100%;
+    }
+  }
+
+  &-arrow {
+    width: 12vw;
+    position: absolute;
+    top: 12%;
+    left: -5%;
+    transform: rotate(4deg);
+  }
+}

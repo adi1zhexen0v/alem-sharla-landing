@@ -6,9 +6,28 @@
   align-items: $ai;
 }
 
-@mixin text ($size: 20px, $line-height: 35px, $weight: 400, $color: black) {
+@mixin text ($size: 20px, $line-height: 35px, $weight: 400, $color: black, $font: $jostFont) {
+  font-family: $font;
   font-size: $size;
   line-height: $line-height;
   font-weight: $weight;
   color: $color;
 }
+
+@mixin btn($color: $blueGray, $hover-color: #fff, $bg-color: transparent, $border-color: $blueGray, $padding: 15px 60px) {
+  @include text(18px, 28px, 500, $color);
+ 
+  display: inline-block;
+  padding: $padding;
+  background: $bg-color;
+  border: 1px solid $border-color;
+  border-radius: 50px;
+  transition: 0.3s ease;
+
+  &:hover {
+    cursor: pointer;
+    background: $color;
+    color: $hover-color;
+  }
+}
+

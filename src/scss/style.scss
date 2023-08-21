@@ -1,3 +1,9 @@
 @import 'libs/variables';
 @import 'libs/mixins';
 @import 'libs/reset';
+
+@import 'sections/all';
+
+body {
+  margin: 0 10%;
+}
