@@ -2,8 +2,12 @@
 $darkGray: #18181B;
 $blueGray: #475569;
 $gray: #52525B;
+$lightGray: #F8F7FC;
 $green: #1B7875;
 $lightBlue: #E2E8F0;
+
+// Gradients
+$listBlueGradient: linear-gradient(180deg, #A6D1FC 0%, #AAD0FD 1.68%, #B2D6FF 11.13%, #B7DBFF 21.14%, #B4DAFE 23.4%, #B8DCFF 27.61%, #B9DDFF 32.1%, #BBDDFF 35.07%, #BCE0FF 39.36%, #BEE1FF 42.5%, #C2E4FF 53.24%, #C5E4FF 56.66%, #C7E7FE 63.06%, #C9E7FF 68.32%, #C8EBFE 74.86%, #D0EDFF 82.13%, #D4F1FF 89.52%, #D4F1FF 93.9%, #D5F1FF 97.13%, #D5F1FF 100%);
 
 // Fonts
 $interFont: 'Inter', sans-serif;

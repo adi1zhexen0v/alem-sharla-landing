@@ -1,0 +1,76 @@
+@import '../libs/mixins';
+@import '../libs/variables';
+
+.features {
+  &-block {
+    position: relative;
+
+    &:first-child {
+      .features-wrapper {
+        margin-bottom: 180px;
+      }
+
+      .features-item {
+        margin-left: 105px;
+      }
+    }
+
+    &:last-child {
+      background: $listBlueGradient;
+      padding: 280px 0 200px;
+    }
+  }
+
+  &-wrapper {
+    @include flex(flex-start, flex-start);
+  }
+
+  &-part {
+    position: relative;
+    width: 50%;
+  }
+
+  &-item {
+    max-width: 510px;
+
+    &__title {
+      @include text(32px, 32px, 600, $green);
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      @include text(18px, 28px, 400, $gray);
+      max-width: 400px;
+    }
+  }
+
+  &-images {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    &__item {
+      border: 5px solid #fff;
+      border-radius: 10px;
+      &:first-child {
+        width: 100%;
+      }
+
+      &:last-child {
+        width: 35%;
+        position: absolute;
+        bottom: -14%;
+        right: -6%;
+      }
+    }
+  }
+
+  &-bg {
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
