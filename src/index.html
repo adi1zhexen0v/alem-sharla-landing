@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Jost:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.min.css">
+  <script defer src="./js/script.js"></script>
   <title>Alem Sharla | Visa Agency</title>
 </head>
 <body>
@@ -16,6 +17,7 @@
         <div class="nav-logo">AlemSharla</div>
       </div>
       <div class="nav-part">
+        <a href="tel:+77779996798" class="nav-phone">+ 7 777 999 67 98</a>
         <div class="nav-btn">Связаться</div>
       </div>
     </nav>
@@ -43,6 +45,7 @@
       </div>
     </div>
     <img src="./img/header/header-top-right-bg.png" alt="Фоновое изображение в верхнем правом угул" class="nav-bg" id="nav-bg-top-right">
+    <div class="nav-bg" id="nav-bg-top-left"></div>
   </header>
 
   <section class="features">
@@ -79,5 +82,46 @@
       <img src="./img/features/big-ben.png" alt="Биг Бен" class="features-bg">
     </div>
   </section>
+  
+  <section class="approval">
+    <div class="approval-wrapper container">
+      <div class="approval-part">
+        <div class="approval-img">
+          <img src="./img/approval/approval-img.png" alt="">
+        </div>
+      </div>
+      <div class="approval-part">
+        <div class="approval-info">
+          <h6 class="approval-info__percent">99%</h6>
+          <h4 class="approval-info__title">одобрение –</h4>
+          <h2 class="approval-info__subtitle">гарантированный путь к вашей визе</h2>
+          <p class="approval-info__text">
+            Мы гордимся уникальной статистикой одобрения в 99% случаев — ваша виза уже почти в ваших руках!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal hide">
+    <div class="modal-container">
+      <div class="modal-close">&times;</div>
+      <div class="modal-content">
+        <h6 class="modal-content__title">Связаться с нами</h6>
+        <form class="modal-content__form">
+          <p class="modal-content__text">
+            Если у вас остались вопросы, заполните форму и мы свяжемся с вами в ближайшее  время
+          </p>
+          <input type="text" class="modal-content__form-input" placeholder="Имя">
+          <p class="modal-content__error"></p>
+          <input type="text" class="modal-content__form-input" placeholder="Email/телефон">
+          <p class="modal-content__error"></p>
+          <textarea class="modal-content__form-input" placeholder="Сообщение" rows="6"></textarea>
+          <p class="modal-content__error"></p>
+          <input type="submit" class="modal-content__form-submit" value="Отправить">
+        </form>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

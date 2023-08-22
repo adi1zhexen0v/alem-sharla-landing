@@ -1,0 +1,70 @@
+@import '../libs/mixins';
+@import '../libs/variables';
+
+.approval {
+  background: $lightGray;
+  padding: 120px 0;
+
+  &-wrapper {
+    @include flex();
+  }
+
+  &-part {
+    width: 50%;
+  }
+
+  &-img {
+    position: relative;
+    width: 460px;
+    aspect-ratio: 1/1;
+    border: 15px solid $blue;
+    border-radius: 100%;
+    
+    @include flex(center, center);
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: -15px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 15px;
+      height: 15px;
+      background: $darkBlue;
+    }
+
+    img {
+      width: 320px;
+      aspect-ratio: 1/1;
+      border-radius: 100%;
+      object-fit: cover;
+      object-position: 0 -25px;
+    }
+  }
+
+  &-info {
+    margin-left: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    &__percent {
+      @include text(192px, 120px, 400, $green);
+      margin-left: -12px;
+    }
+
+    &__title {
+      @include text(64px, 66px, 400, $green);
+    }
+
+    &__subtitle {
+      @include text(32px, 32px, 400, $darkGray);
+    }
+
+    &__text {
+      @include text(18px, 28px, 400, $gray, $interFont);
+    }
+  }
+
+
+}

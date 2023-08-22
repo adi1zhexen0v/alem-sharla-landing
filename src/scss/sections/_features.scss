@@ -39,7 +39,7 @@
     }
 
     &__text {
-      @include text(18px, 28px, 400, $gray);
+      @include text(18px, 28px, 400, $gray, $interFont);
       max-width: 400px;
     }
   }

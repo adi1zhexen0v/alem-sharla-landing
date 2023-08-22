@@ -20,8 +20,19 @@
     @include btn();
   }
 
+  &-phone {
+    @include text(16px, 24px, 500, $darkGray, $plusJakartaFont);
+  }
+
   &-bg {
     position: absolute;
+  }
+
+  &-part {
+    &:last-child {
+      @include flex();
+      gap: 120px;
+    }
   }
 }
 
@@ -33,6 +44,17 @@
         top: 0;
         right: 0;
         z-index: -1;
+      }
+
+      &-left {
+        width: 45vw;
+        aspect-ratio: 1/1;
+        border-radius: 100%;
+        background: rgba($green, .08);
+
+        top: -30%;
+        left: -20%;
+        filter: blur(108px);
       }
     }
   }
