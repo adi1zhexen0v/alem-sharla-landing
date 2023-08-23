@@ -8,6 +8,10 @@
   margin: 0 10%;
 }
 
+.default-text {
+  @include text(18px, 28px, 400, $gray, $interFont);
+}
+
 .modal {
   position: fixed;
   top: 0;

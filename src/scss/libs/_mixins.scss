@@ -14,7 +14,7 @@
   color: $color;
 }
 
-@mixin btn($color: $blueGray, $hover-color: #fff, $bg-color: transparent, $border-color: $blueGray, $padding: 15px 60px) {
+@mixin btn($color: $blueGray, $hover-color: #fff, $bg-color: transparent, $border-color: $blueGray, $padding: 15px 60px, $bg-hover: $color) {
   @include text(18px, 28px, 500, $color);
  
   display: inline-block;
@@ -26,7 +26,7 @@
 
   &:hover {
     cursor: pointer;
-    background: $color;
+    background: $bg-hover;
     color: $hover-color;
   }
 }

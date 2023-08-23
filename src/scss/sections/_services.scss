@@ -1,0 +1,63 @@
+@import '../libs/mixins';
+@import '../libs/variables';
+
+.services {
+  padding-bottom: 135px;
+
+  &-wrapper {
+    position: relative;
+    padding: 100px 110px;
+    background: $lightBlue;
+    border-radius: 40px;
+    margin-bottom: 240px !important;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    &__block {
+      &:last-child {
+        @include flex(flex-start, center);
+        gap: 10px;
+      }
+
+      &-outer {
+        margin-left: 37%;
+      }
+    }
+
+    &__title {
+      @include text(32px, 28px, 700, $green);
+      max-width: 735px;
+      letter-spacing: -0.2px;
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      max-width: 540px;
+    }
+
+    &__btn {
+      @include btn(#fff, $green, $green, $green, 15px 36px, transparent);
+
+      &-inverse {
+        @include btn();
+      }
+    }
+  }
+
+  &-circles {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  &-bg {
+    width: 380px;
+    position: absolute;
+    bottom: -14%;
+    right: -5%;
+  }
+}

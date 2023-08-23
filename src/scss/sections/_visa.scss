@@ -13,10 +13,6 @@
       margin-bottom: 20px;
 
     }
-
-    &__text {
-      @include text(18px, 28px, 400, $gray, $interFont);
-    }
   }
 
   &-list {

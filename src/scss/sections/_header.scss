@@ -94,7 +94,6 @@
 
   &-text {
     max-width: 540px;
-    @include text(18px, 28px, 400, $gray, $interFont);
   }
 
   &-btn {
