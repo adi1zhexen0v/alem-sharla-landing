@@ -1,0 +1,53 @@
+@import '../libs/mixins';
+@import '../libs/variables';
+
+.visa {
+  padding: 200px 0 280px;
+  &-header {
+    max-width: 540px;
+    margin: 0 auto 80px;
+    text-align: center;
+
+    &__title {
+      @include text(32px, 32px, 600, $green);
+      margin-bottom: 20px;
+
+    }
+
+    &__text {
+      @include text(18px, 28px, 400, $gray, $interFont);
+    }
+  }
+
+  &-list {
+    @include flex(space-between, fles-start);
+  }
+
+  &-item {
+    padding: 72px 48px;
+    box-shadow: 0px 100px 80px 0px rgba(#000, .04);
+    border-radius: 36px;
+
+    @include flex(flex-start, center);
+    flex-direction: column;
+    gap: 80px;
+
+    &__img {
+      height: 125px;
+    }
+
+    &__info {
+      max-width: 216px;
+      text-align: center;
+    }
+
+    &__title {
+      @include text(20px, 28px, 500, $darkGray);
+      margin-bottom: 4px;
+    }
+
+    &__text {
+      @include text(16px, 21px, 400, $gray);
+    }
+  }
+}
