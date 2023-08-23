@@ -1,0 +1,56 @@
+@import '../libs/mixins';
+@import '../libs/variables';
+
+.screens {
+  aspect-ratio: 32/23;
+  background-image: url(../img/screens/screens-bg.png);
+  background-size: cover;
+
+  &-wrapper {
+    position: relative; 
+    height: 100%;
+  }
+
+  &-phone {
+    width: 16vw;
+    position: absolute;
+
+    &:nth-child(1) {
+      top: -20%;
+      left: 0;
+    }
+
+    &:nth-child(2) {
+      top: 12%;
+      right: 28%;
+    }
+
+    &:nth-child(3) {
+      bottom: 7%;
+      right: 0;
+    }
+  }
+
+  &-info {
+    position: absolute;
+    bottom: 7%;
+    padding: 90px 110px;
+    border-radius: 10px;
+    background: #fff;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 465px;
+    }
+
+    &__subtitle {
+      @include text(15px, 28px, 600, $darkGray);
+    }
+
+    &__title {
+      @include text(32px, 28px, 700, $green);
+    }
+  }
+}

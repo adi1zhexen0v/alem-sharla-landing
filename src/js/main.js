@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
     modalSelector: '.modal',
     modalTitleSelector: '.modal-content__title',
     modalFormSelector: '.modal-content__form',
-    modalOpenBtnSelector: '.nav-btn',
+    modalOpenBtnsSelector: '[data-modal]',
     modalCloseBtnSelector: '.modal-close',
     modalInputsSelector: 'input[type="text"], textarea',
     modalErrorsSelector: '.modal-content__error'

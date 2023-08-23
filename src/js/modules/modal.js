@@ -2,7 +2,7 @@ const modal = ({
   modalSelector,
   modalTitleSelector,
   modalFormSelector,
-  modalOpenBtnSelector,
+  modalOpenBtnsSelector,
   modalCloseBtnSelector,
   modalInputsSelector,
   modalErrorsSelector
@@ -10,7 +10,7 @@ const modal = ({
   const modal = document.querySelector(modalSelector);
   const modalTitle = document.querySelector(modalTitleSelector);
   const modalForm = document.querySelector(modalFormSelector);
-  const modalOpenBtn = document.querySelector(modalOpenBtnSelector);
+  const modalOpenBtns = document.querySelectorAll(modalOpenBtnsSelector);
   const modalCloseBtn = document.querySelector(modalCloseBtnSelector);
   const modalInputs = modal.querySelectorAll(modalInputsSelector);
   const modalErrors = modal.querySelectorAll(modalErrorsSelector);
@@ -63,7 +63,9 @@ const modal = ({
   }
   
   modalCloseBtn.addEventListener('click', closeModal);
-  modalOpenBtn.addEventListener('click', openModal);
+  modalOpenBtns.forEach(btn => {
+    btn.addEventListener('click', openModal);
+  });
 
   modal.addEventListener('click', (e) => {
     if (e.target === modal) {

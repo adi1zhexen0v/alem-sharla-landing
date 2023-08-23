@@ -1,0 +1,43 @@
+@import '../libs/mixins';
+@import '../libs/variables';
+
+.download {
+  padding: 200px 0 100px;
+  @include flex(center, center);
+  flex-direction: column;
+
+  &-header {
+    max-width: 1120px;
+    @include flex(center, center);
+    flex-direction: column;
+    gap: 20px;
+
+    &__title {
+      @include text(58px, 66px, 700, $darkGray);
+      text-align: center;
+
+      span {
+        color: $green;
+      }
+    }
+
+    &__buttons {
+      @include flex(center, center);
+      gap: 40px;
+
+      &-item {
+        @include btn(#fff, $green, $green, $green, 15px 36px, transparent);
+
+        &-inverse {
+          @include btn($padding: 15px 85px);
+        }
+      }
+    }
+  }
+
+  &-body {
+    &__img {
+      width: 32vw;
+    }
+  }
+}

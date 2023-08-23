@@ -19,16 +19,17 @@ export const paths = {
 }
 
 export const imageminOptions = [
-  imageminGifsicle({ interlaced: false }),
-  imageminMozjpeg({ quality: 90, progressive: true, tune: "ms-ssim" }),
-  imageminOptipng({ optimizationLevel: 3, bitDepthReduction: true, colorTypeReduction: true, paletteReduction: true }),
+  imageminGifsicle({ interlaced: true }),
+  imageminMozjpeg({ quality: 80, progressive: true }),
+  imageminOptipng({ optimizationLevel: 5 }),
   imageminSvgo({
     plugins: [
-      { removeViewBox: false },
-      { cleanupIDs: true }
+      { removeViewBox: true },
+      { cleanupIDs: false }
     ]
   })
 ];
+
 
 export const webpackOptions = {
   mode: 'development',
