@@ -63,7 +63,7 @@ const modal = ({
   }
   
   modalCloseBtn.addEventListener('click', closeModal);
-  modalOpenBtns.forEach(btn => {
+  modalOpenBtns.forEach(btn => { 
     btn.addEventListener('click', openModal);
   });
 

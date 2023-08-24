@@ -68,7 +68,7 @@
   &-part {
     &:first-child {
       margin-top: 100px;
-      width: 750px;
+      max-width: 750px;
       display: flex;
       flex-direction: column;
       gap: 27px;
@@ -125,5 +125,190 @@
     top: 12%;
     left: -5%;
     transform: rotate(4deg);
+  }
+}
+
+@media screen and (max-width: 1532px) {
+  .home {
+    &-arrow {
+      top: 24%;
+      left: -36%;
+      transform: rotate(-12deg);
+    }
+  }
+}
+
+@media screen and (max-width: 1368px) {
+  .nav {
+    padding: 24px 0;
+    margin-bottom: 100px;
+  
+    &-btn {
+      padding: 13.5px 60px;
+    }
+    &-part {
+      &:last-child {
+        gap: 80px;
+      }
+    }
+  }
+
+  .home {
+    &-part {
+      &:first-child {
+        margin-top: 80px;
+        max-width: 560px;
+      }
+    }
+  
+    &-screens {
+      &__list {
+        gap: 28px;
+      }
+  
+      &__item {
+        width: 18vw;
+      }
+    }
+
+    &-arrow {
+      width: 14vw;
+      top: 16%;
+      left: -5%;
+      transform: rotate(-5deg);
+    }
+
+    &-btn {
+      padding: 13.5px 83.5px;
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .home {
+    &-list {
+      flex-direction: column;
+      gap: 80px;
+    }
+
+    &-part {
+      &:first-child {
+        margin-top: 0;
+        max-width: none;
+      }
+      &:last-child {
+        width: 100%;
+      }
+    }
+
+    &-text {
+      max-width: 75%;
+    }
+    &-screens {
+      &__list {
+        justify-content: center;
+        gap: 10vw;
+      }
+
+      &__item {
+        width: 30vw;
+
+        &:first-child {
+          margin-top: 23vh;
+        }
+      }
+
+      &__img {
+        width: 100%;
+      }
+    }
+
+    &-arrow {
+      width: 192px;
+      top: -22%;
+      left: 70%;
+      transform: rotate(70deg);
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .nav {
+    &-btn {
+      display: none;
+    }
+  }
+
+  .home {
+    &-screens {
+      &__item {
+        width: 40vw;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav {
+    margin-bottom: 40px;
+  }
+
+  .header {
+    padding-bottom: 100px;
+  }
+
+  .home {
+    &-list {
+      gap: 60px;
+    }
+
+    &-subtitle {
+      font-size: 13px;
+      line-height: 13px;
+    }
+  
+    &-title {
+      font-size: 32px;
+      line-height: 36px;
+    }
+  
+    &-text {
+      max-width: none;
+    }
+
+    &-btn {
+      width: 100%;
+      text-align: center;
+    }
+
+    &-arrow {
+      display: none;
+    }
+
+    &-part {
+      &:first-child {
+        gap: 20px;
+      }
+    }
+
+    &-screens {
+      &__list {
+        justify-content: space-between;
+        gap: 40px;
+      }
+
+      &__item {
+        width: auto;
+        flex: 1;
+
+        &:first-child {
+          margin-top: 24%;
+        }
+      }
+
+      &__img {
+        width: 100%;
+      }
+    }
   }
 }

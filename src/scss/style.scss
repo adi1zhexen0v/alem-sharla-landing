@@ -12,104 +12,32 @@
   @include text(18px, 28px, 400, $gray, $interFont);
 }
 
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(#000, .55);
-
-  @include flex(center, center);
-
-  &-container {
-    position: relative;
-    background: $lightGray;
-    border-radius: 20px;
-    padding: 100px 140px 72px 140px;
-  }
-
-  &-content {
-    max-width: 540px;
-
-    &__title {
-      @include text(32px, 46px, 400, $green, $interFont);
-      margin-bottom: 8px;
-    }
-
-    &__text {
-      @include text(18px, 24px, 400, $gray, $interFont);
-      margin-bottom: 25px;
-    }
-
-    &__error {
-      height: 30px;
-      @include text(14px, 18px, 400, $red);
-    }
-
-    &__form {
-      display: flex;
-      flex-direction: column;
-
-      &-input {
-        background: #fff;
-        padding: 16px 21px;
-        border-radius: 7px;
-        outline: none;
-        resize: none;
-
-        @include text(14px, 17px, 500, $darkGray);
-
-        &::placeholder {
-          @include text(14px, 17px, 500, $gray);
-        }
-
-        &::-webkit-scrollbar {
-          width: 20px;
-        }
-        
-        &::-webkit-scrollbar-track {
-          background: #fff;
-        }
-        
-        &::-webkit-scrollbar-thumb {
-          background: $green;
-          border-radius: 10px;
-          border: 7px solid #fff;
-        }
-
-        &-error {
-          border: 1px solid $red;
-        }
-      }
-
-      &-submit {
-        background: $green;
-        padding: 16px 0;
-        border-radius: 10px;
-        transition: 0.2s ease;
-
-        @include text(16px, 16px, 400, #fff);
-
-        &:hover {
-          cursor: pointer;
-          background: rgba($green, .8);
-        }
-      }
-    }
-  }
-
-  &-close {
-    position: absolute;
-    top: 20px;
-    right: 40px;
-    font-size: 54px;
-    color: $gray;
-    cursor: pointer;
-  }
+body {
+  overflow-x: hidden;
 }
 
 .hide {
   display: none;
+}
+
+@media screen and (max-width: 1368px) {
+  .container {
+    margin: 0 6%;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .container {
+    margin: 0 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    margin: 0 30px;
+  }
+
+  .default-text {
+    font-size: 16px;
+  }
 }

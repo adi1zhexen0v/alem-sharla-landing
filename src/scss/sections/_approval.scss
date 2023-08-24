@@ -61,6 +61,32 @@
       @include text(32px, 32px, 400, $darkGray);
     }
   }
+}
 
+@media screen and (max-width: 1440px) {
+  .approval {
+    &-info {
+      margin-left: 80px;
+  
+      &__percent {
+        font-size: 144px;
+        margin-left: -8px;
+      }
+  
+      &__title {
+        font-size: 56px;
+        line-height: 60px;
+      }
+  
+      &__subtitle {
+        font-size: 26px;
+      }
+    }
+  }
+}
 
+@media screen and (max-width: 1080px) {
+  .approval {
+    display: none;  
+  }
 }

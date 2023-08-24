@@ -2,9 +2,11 @@
 @import '../libs/variables';
 
 .screens {
-  aspect-ratio: 32/23;
-  background-image: url(../img/screens/screens-bg.png);
-  background-size: cover;
+  &-bg {
+    aspect-ratio: 32/23;
+    background-image: url(../img/screens/screens-bg.png);
+    background-size: cover;
+  }
 
   &-wrapper {
     position: relative; 
@@ -38,6 +40,10 @@
     border-radius: 10px;
     background: #fff;
 
+    &__outer {
+      display: none;
+    }
+
     &__content {
       display: flex;
       flex-direction: column;
@@ -51,6 +57,92 @@
 
     &__title {
       @include text(32px, 28px, 700, $green);
+    }
+  }
+}
+
+@media screen and (max-width: 1368px) {
+  .screens {
+    &-phone {
+      width: 18vw;  
+
+      &:nth-child(2) {
+        top: 2%;
+      }
+    }
+
+    &-info {
+      padding: 40px 48px;
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .screens {
+    &-bg {
+      aspect-ratio: 1/1;
+    }
+
+    &-phone {
+      width: 30vw;  
+
+      &:nth-child(1) {
+        top: -290px;
+      }
+
+      &:nth-child(2) {
+        top: -72px;
+        right: 0;
+      }
+
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .screens {
+    &-info {
+      width: 520px;
+
+      &__content {
+        width: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .screens {
+    &-wrapper {
+      margin-bottom: 130px !important;
+    }
+
+    &-info {
+      display: none;
+
+      &__outer {
+        display: block;
+      }
+    }
+
+    &-phone {
+      width: 40vw;
+
+      &:nth-child(1) {
+        right: 0;
+        left: auto;
+        top: -100px;
+      }
+
+      &:nth-child(2) {
+        left: 0;
+        right: auto;
+        top: auto;
+        bottom: -80px;
+      }
     }
   }
 }

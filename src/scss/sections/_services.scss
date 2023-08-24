@@ -3,6 +3,7 @@
 
 .services {
   padding-bottom: 135px;
+  overflow: hidden;
 
   &-wrapper {
     position: relative;
@@ -24,7 +25,7 @@
       }
 
       &-outer {
-        margin-left: 37%;
+        margin-left: 39%;
       }
     }
 
@@ -59,5 +60,92 @@
     position: absolute;
     bottom: -14%;
     right: -5%;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .services {
+    &-wrapper {
+      margin: 0 0 200px !important;
+      padding: 80px 40px;
+      border-radius: 0;
+    }
+
+    &-bg {
+      width: 260px;
+      right: -0.8%;
+    }
+
+    &-circles {
+      right: -5%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services {
+    &-wrapper {
+      padding: 120px 40px 160px;
+    }
+
+    &-content {
+      &__title {
+        max-width: none;
+      }
+
+      &__text {
+        max-width: none;
+      }
+
+      &__block {
+        &:last-child {
+          z-index: 3;
+        }
+      }
+    }
+
+    &-bg {
+      right: 4%;
+      bottom: -20%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .services {
+    padding-bottom: 160px; 
+
+    &-wrapper {
+      padding: 120px 30px 160px;
+      margin-bottom: 280px !important;
+    }
+
+    &-content {
+      &__block {
+        &:last-child {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        &-outer {
+          margin: 0 30px;
+        }
+      }
+
+      &__btn {
+        width: 100%;
+        text-align: center;
+
+        &-inverse {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      &__title {
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
   }
 }
