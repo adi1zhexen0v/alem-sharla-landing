@@ -201,6 +201,14 @@
 
 @media screen and (max-width: 768px) {
   .features {
+    &-block {
+      &:first-child {
+        .features-item {
+          max-width: 100%;
+        }
+      }
+    }
+
     &-approval {
       &__info {
         &-percent {
@@ -221,10 +229,11 @@
     &-images {
       margin-left: -30px;
     }
-    
+
     &-block {
       &:last-child {
         .features-item {
+          margin-top: 15%;
           margin-left: 0;
         }
       }
