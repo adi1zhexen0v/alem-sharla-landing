@@ -1,3 +1,6 @@
+import dotenv from 'dotenv'
+import webpack from 'webpack';
+
 import imageminGifsicle from 'imagemin-gifsicle';
 import imageminMozjpeg from 'imagemin-mozjpeg';
 import imageminOptipng from 'imagemin-optipng';
@@ -55,5 +58,10 @@ export const webpackOptions = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      "process.env":JSON.stringify(dotenv.config().parsed)
+    })
+  ]
 }
