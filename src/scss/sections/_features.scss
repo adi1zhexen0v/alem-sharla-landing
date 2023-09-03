@@ -87,7 +87,7 @@
           max-width: 65%;
 
           &__text {
-            max-width: 80%;
+            max-width: 415px;
           }
         }
 
@@ -231,6 +231,14 @@
     }
 
     &-block {
+      &:first-child {
+        .features-item {
+          &__text {
+            max-width: 360px;
+          }
+        }
+      }
+
       &:last-child {
         .features-item {
           margin-top: 15%;

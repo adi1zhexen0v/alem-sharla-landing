@@ -2,3 +2,5 @@
 /build
 package-lock.json
 .env
+/src/privacy.html
+/src/scss/privacy.scss
