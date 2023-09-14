@@ -37,7 +37,11 @@
     }
 
     &__text {
-      max-width: 540px;
+      max-width: 40px;
+
+      &:last-child {
+        max-width: 500px;
+      }
     }
 
     &__btn {
