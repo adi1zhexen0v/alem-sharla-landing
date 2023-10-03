@@ -9,7 +9,8 @@ export const addFeedback = async (name, contact, message) => {
 			name,
 			contact,
 			message,
-			createdAt: Timestamp.now()
+			createdAt: Timestamp.now(),
+			status: 'new'
 		};
 		await addDoc(collectionRef, feedbackData);
 	} catch (error) {

@@ -1,7 +1,7 @@
 import modal from './modules/modal.js';
 import lottie from './modules/lottie.js';
 
-window.addEventListener('DOMContentLoaded', () => {	
+window.addEventListener('DOMContentLoaded', () => {
 	modal({
 		modalSelector: '.modal',
 		modalTitleSelector: '.modal-content__title',
